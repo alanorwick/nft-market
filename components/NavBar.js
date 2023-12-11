@@ -7,10 +7,10 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const account = useSelector((state) => state.web3Reducer.account);
   const provider = useSelector((state) => state.web3Reducer.connection);
-  const [isClient, setIsClient] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setIsMounted(true); // Set this flag to true only on the client side
     const ethereum = window.ethereum;
     if (ethereum) {
       ethereum.on('accountsChanged', accountChanged);
@@ -49,7 +49,7 @@ const NavBar = () => {
           <span className="navbar-brand logo">NFT</span>
         </Link>
 
-        {isClient && account ? (
+        {isMounted && account ? (
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item active">
@@ -59,7 +59,7 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link href="/my-orders">
-                  <span className="nav-link">My Orders</span>
+                  <span className="nav-link">My NFTs</span>
                 </Link>
               </li>
               <li className="nav-item">

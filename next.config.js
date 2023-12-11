@@ -6,6 +6,7 @@ const nextConfig = {
     CHAIN_ID:9000
   },
   reactStrictMode: true,
+  strictMode: true,
   images: {
     domains: ['ipfs.infura.io'],
   },

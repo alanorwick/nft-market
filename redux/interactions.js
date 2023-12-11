@@ -148,7 +148,7 @@ const getAccounts = async (dispatch) => {
       return res;
     }))
 
-    console.log("mintedNFT", formattedNFTList)
+    console.log("mintedNFTs", formattedNFTList)
 
     dispatch(actions.mintedNFTLoaded(formattedNFTList))
   }

@@ -58,8 +58,11 @@ const CardComponent = ({nftData}) => {
         </div>
         <div className="d-flex flex-column">
           <small>Bid price</small>
-          <p><i className="fab fa-ethereum"></i> {nftData.price}</p>
-        </div>
+          <p style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/quai_logo.png" alt="Quai" style={{ height: '1rem', width: '1rem', marginRight: '0.5rem' }}/>
+            {nftData.price}
+        </p>
+            </div>
         </div>
         
       </div>
