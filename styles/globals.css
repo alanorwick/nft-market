@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Luckiest+Guy&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #191c1b;
+  --light-black-s: #3f4944;
+  --light-black-p: #303a36;
+  --white: #ffffff;
+  --background:#e6e6e6;
+  /* Fonts */
+  --header: 'Luckiest Guy', cursive;
+  --sub-header: 'Long Cang', cursive;
+  --primary:'Open Sans', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo{
+  font-weight: bold !important;
+  font-family: var(--header) !important;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.nav-item{
+   color: var(--black) !important;
+   cursor: pointer !important;
+} 
+
+.header-text{
+  font-family: var(--header);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+  color: #000000;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.sub-header-text{
+  font-family: var(--sub-header);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 29px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.root .card{
+  border-radius: 10px !important;
+}
+.root .card span{
+  width: 100% !important;
+  height: 300px !important;
+}
+.root .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.root .card .card-body small{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  /* text-align: center; */
+}
+
+.root .card .card-body p{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px
+}
+
+.create-nft button{
+  width: 100% !important;
+}
+
+.attribute button{
+width: 30% !important;
+}
+
+.attr-badge{
+  background: var(--light-black-s);
+}
+.buy-now{
+  width: 100%;
+  color: #1395ff;
+}
