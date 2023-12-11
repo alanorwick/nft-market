@@ -60,7 +60,7 @@ const getAccounts = async (dispatch) => {
   console.log('eth_accounts...')
   try {
     await window.ethereum
-      .request({ method: 'eth_requestAccounts' })
+      .request({ method: 'eth_accounts' })
       .then(async (accounts) => {
         if (accounts.length !== 0) {
           dispatch(actions.walletAddressLoaded(accounts[0]));
