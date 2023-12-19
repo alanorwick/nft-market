@@ -26,7 +26,7 @@ const NavBar = () => {
   const connectWallet = async () => {
     if (window.ethereum) {
       try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        await window.ethereum.request({ method: 'quai_requestAccounts' });
         await loadAccount(provider, dispatch);
       } catch (err) {
         console.error('Error getting accounts.', err);

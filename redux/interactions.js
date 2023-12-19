@@ -57,10 +57,10 @@ export const loadWeb3 = async (dispatch) => {
 
 const getAccounts = async (dispatch) => {
 
-  console.log('eth_accounts...')
+  console.log('quai_accounts...')
   try {
     await window.ethereum
-      .request({ method: 'eth_accounts' })
+      .request({ method: 'quai_accounts' })
       .then(async (accounts) => {
         if (accounts.length !== 0) {
           dispatch(actions.walletAddressLoaded(accounts[0]));
